@@ -1,0 +1,139 @@
+name: Python App with Single Package Installs
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'  # alle 5 Minuten
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Cache name: Python App with Single Package Installs
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'  # alle 5 Minuten
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install required packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install \
+          scikit-learn \
+          yfinance \
+          joblib \
+          pandas \
+          matplotlib \
+          mplfinance \
+          nuname: Python App with Single Package Installs
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'  # alle 5 Minuten
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install required packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install \
+          scikit-learn \
+          yfinance \
+          joblib \
+          pandas \
+          matplotlib \
+          mplfinance \
+          numpy
+        pip list
+
+    - name: Run main.py
+      run: |
+        python main.py
+mpy
+        pip list
+
+    - name: Run main.py
+      run: |
+        python main.py
+pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install required packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install \
+          scikit-learn \
+          yfinance \
+          joblib \
+          pandas \
+          matplotlib \
+          mplfinance \
+          numpy
+        pip list
+
+    - name: Run main.py
+      run: |
+        python main.py
+        

@@ -2,7 +2,7 @@ name: Run Main Bot
 
 on:
   schedule:
-    - cron: '*/15 * * * *'     # alle 15 Minuten automatisch
+    - cron: '*/5 * * * *'     # alle 15 Minuten automatisch
   workflow_dispatch:           # manuell startbar per Button
 
 jobs:

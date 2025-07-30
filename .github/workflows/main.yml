@@ -1,4 +1,4 @@
-name: Run Main
+name: Run my Main
 
 on:
   schedule:
